@@ -9,6 +9,10 @@ app.use(cors());
 
 const PORT = process.env.PORT || 3000;
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the backend API!');
+});
+
 // Public greeting endpoint
 app.get('/greetings', (req, res) => {
   res.json({ message: 'greetings' });
